@@ -17,3 +17,4 @@ data = SHEET.worksheet('data')
 details = data.get_all_values()
 
 print(details)
+
