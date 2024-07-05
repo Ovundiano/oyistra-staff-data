@@ -12,9 +12,17 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('oyistra-staff-data')
 
-data = SHEET.worksheet('data')
+def get_employee_data():
+    """
+    Get employee details input from the user
+    """
+    print("Enter employee details")
+    print("Details should be Emp No, Position, Emp Name, Age, Wages, Contract Hours")
+    print("Emp No must be a whole number not decimal, Position should be the rank of emp, Emp Name should be alphabets not numbers, Age should be whole number not decimal, Wages should be numbers, Contract Hours can be whole or decimal number, should be separated by commas")
+    print("Example: 001, Sales Manager, Robert Albert, 20, 30000, 42\n")
 
-details = data.get_all_values()
+    data_str = input("Enter employee details: ")
+    print(data_str)
 
-print(details)
+get_employee_data()
 
