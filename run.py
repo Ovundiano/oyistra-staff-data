@@ -68,11 +68,7 @@ def validate_data(details):
     except ValueError as e:
         print(f"Validation error: {e}, please try again.\n")
 
-def is_alpha_or_space(string):
-    for char in string:
-        if not char.isalpha() or char.isspace():
-            return False
-        return True
+
 
 get_employee_data()
 
