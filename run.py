@@ -42,6 +42,7 @@ def validate_data(details):
     Raise ValueError if strings cannot be converted into integers or floats,
     or if there aren't the same 6 details.
     """
+
     try:
         if len(details) != 5:
             raise ValueError(
