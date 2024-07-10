@@ -18,15 +18,15 @@ details = data.get_all_values()
 
 def get_employee_detail():
     """
-    Get employee details input from the user
+    Get employee details input from the user.
+    Run a while loop to collect a valid string of employee details from users
+    via the terminal, which must be a string of numbers and alphabets separated
+    by commas. The loop will repeatedly request employee details, until details provided are valid.
     """
     while True:
-        print("Enter employee details.\n")
-        print("Details should be 6 value: Emp No, Position, Emp Name, Age, Wages, Contract Hours.\n")
-        print("Emp No must be a whole number not decimal, Position should be the rank of the employee, Emp Name should be in alphabets not numbers, Age should be whole number not decimal, Wages should be numbers, Contract Hours can be whole or decimal number and each details should be separated by commas.\n")
         print("Example: 001,Sales Manager,Robert Albert,20,30000,42\n")
 
-        detail_str = input("Enter employee details: ")
+        detail_str = input("Enter employee details:\n")
 
         employee_detail = detail_str.split(",")
         
@@ -50,7 +50,7 @@ def validate_data(details):
 
         if not details[0].isdigit():
             raise ValueError(
-                f"Invalid data type for {details[0]}. Expected EmpNo in integer"
+                f"Invalid data type for {details[0]}. Expected EmpNo in digit"
             )
 
         if not is_alpha_or_space(details[1]):
@@ -65,12 +65,12 @@ def validate_data(details):
 
         if not details[3].isdigit():
             raise ValueError(
-                f"Invalid data type for {details[3]}. Expected employee age in integer"
+                f"Invalid data type for {details[3]}. Expected employee age in digit"
             )
 
         if not details[4].isdigit():
             raise ValueError(
-                f"Invalid data type for {details[4]}. Expected employee wages in integer"
+                f"Invalid data type for {details[4]}. Expected employee annual wages in digit"
             )
 
         if not details[5].isdigit():
@@ -94,14 +94,21 @@ def is_alpha_or_space(string):
         return True
 
 def update_employee_data_worksheet(detail):
-    """
-    Update data worksheet with list of new employee details provided.
-    """
+    """Update data worksheet with list of new employee details provided."""
     print("Updating worksheet with employee details entered...\n")
     detail_worksheet = SHEET.worksheet("data")
     detail_worksheet.append_row(detail)
     print("You have successfully updated employee data in worksheet.\n")
 
-detail = get_employee_detail()
+def main_employee_detail():
+    """Run all functions in program"""
+    detail = get_employee_detail()
+    update_employee_data_worksheet(detail)
 
-update_employee_data_worksheet(detail)
+print(f"""
+Welcome to Oyistra Staff Data Storage Board\n
+Enter employee details.\n
+Details should be 6 value: Emp No, Position, Emp Name, Age, Wages, Contract Hours.\n
+Emp No must be a whole number not decimal, Position should be the rank of the employee in alphabets, Name should be in alphabets not numbers, Age, Wages and Contract Hours should be whole numbers not decimal and each details should be separated by commas.\n
+""")
+main_employee_detail()
