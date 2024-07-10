@@ -42,9 +42,8 @@ def validate_data(details):
     Raise ValueError if strings cannot be converted into integers or floats,
     or if there aren't the same 6 details.
     """
-
     try:
-        if len(details) != 5:
+        if len(details) != 6:
             raise ValueError(
                 f"Invalid list of employee details entered,6 details are required and you entered {len(details)} details"
             )
@@ -79,6 +78,9 @@ def validate_data(details):
                 f"Invalid data type for {details[5]}. Expected employee contract hours in digit"
             )
 
+    except IndexError:
+        raise ValueError("List doesn't have enough items")
+
     except ValueError as e:
         print(f"Validation error: {e}, please try again.\n")
         return False
@@ -91,7 +93,15 @@ def is_alpha_or_space(string):
             return False
         return True
 
+def update_employee_data_worksheet(detail):
+    """
+    Update data worksheet with list of new employee details provided.
+    """
+    print("Updating worksheet with employee details entered...\n")
+    detail_worksheet = SHEET.worksheet("data")
+    detail_worksheet.append_row(detail)
+    print("You have successfully updated employee data in worksheet.\n")
+
 detail = get_employee_detail()
 
-
-
+update_employee_data_worksheet(detail)
