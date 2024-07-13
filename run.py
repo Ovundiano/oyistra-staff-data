@@ -1,5 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
+from colorama import Fore, Style
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -24,7 +25,7 @@ def get_employee_detail():
     by commas. The loop will repeatedly request employee details, until details provided are valid.
     """
     while True:
-        print("Example: 001,Sales Manager,Robert Albert,20,30000,42\n")
+        print("{Fore.YELLOW}Example: 001,Sales Manager,Robert Albert,20,30000,42\n")
 
         detail_str = input("Enter employee details:\n")
 
