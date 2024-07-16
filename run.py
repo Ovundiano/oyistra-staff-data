@@ -1,6 +1,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
 from colorama import Fore
+from simple_term_menu import TerminalMenu
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -103,14 +104,32 @@ def update_employee_data_worksheet(detail):
 
 def main_employee_detail():
     """Run all functions in program"""
-    detail = get_employee_detail()
-    update_employee_data_worksheet(detail)
-
-print(Fore.WHITE + f"""
+    # Shows welcoming message
+    print(Fore.WHITE + f"""
 Welcome to Oyistra Staff Data Storage Board\n
-Enter employee details.\n
+Please, pick an option in the {Fore.RED}menu!
+    """)
+    options = ["1. Enter Employee Details", "2. View Employee Details Entered", "3. Exit"]
+    exitting = False
+    while exitting is not True:
+        main_menu = TerminalMenu(options)
+        menu_option_index = main_menu.show()
+        menu_options_choice = options[menu_option_index]
+        if menu_options_choice == "3. Exit":
+            print(Fore.YELLOW + f"""
+Good bye from Oyistra Staff Storage Data Board!
+See You Later!
+            """)
+            exitting = True
+        elif menu_options_choice == "1. Enter Employee Details":
+            print(f"""
+{Fore.WHITE}Enter employee details.\n
 {Fore.RED}Details should be 6 value: Emp No, Position, Emp Name, Age, Wages, Contract Hours.\n
 {Fore.WHITE}Emp No must be a whole number not decimal, Position should be the rank of the employee in alphabets, Name should be in alphabets not numbers, Age, Wages and Contract Hours should be whole numbers not decimal and each details should be separated by commas.\n
-""")
+            """)
+            detail = get_employee_detail()
+            update_employee_data_worksheet(detail)
+        else:
+            menu_option_index = main_menu.show()
 
 main_employee_detail()
