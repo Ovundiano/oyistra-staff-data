@@ -109,8 +109,8 @@ def main_employee_detail():
 print(Fore.WHITE + f"""
 Welcome to Oyistra Staff Data Storage Board\n
 Enter employee details.\n
-Details should be 6 value: Emp No, Position, Emp Name, Age, Wages, Contract Hours.\n
-Emp No must be a whole number not decimal, Position should be the rank of the employee in alphabets, Name should be in alphabets not numbers, Age, Wages and Contract Hours should be whole numbers not decimal and each details should be separated by commas.\n
+{Fore.RED}Details should be 6 value: Emp No, Position, Emp Name, Age, Wages, Contract Hours.\n
+{Fore.WHITE}Emp No must be a whole number not decimal, Position should be the rank of the employee in alphabets, Name should be in alphabets not numbers, Age, Wages and Contract Hours should be whole numbers not decimal and each details should be separated by commas.\n
 """)
 
 main_employee_detail()
