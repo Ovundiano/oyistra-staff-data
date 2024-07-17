@@ -2,6 +2,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 from colorama import Fore
 from simple_term_menu import TerminalMenu
+from pprint import pprint
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -14,7 +15,7 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('oyistra-staff-data')
 
-data = SHEET.worksheet('data')
+data = SHEET.worksheet("data")
 
 details = data.get_all_values()
 
@@ -102,6 +103,15 @@ def update_employee_data_worksheet(detail):
     detail_worksheet.append_row(detail)
     print(Fore.YELLOW + "You have successfully updated employee data in worksheet.\n")
 
+def view_employee_details_entered():
+    """Collects columns of employee details from data worksheet and returning the datas as a list of lists."""
+    detail_worksheet = SHEET.worksheet("data")
+    columns = []
+    for ind in range(1, 7):
+        column = detail_worksheet.col_values(ind)
+        columns.append(column)
+        pprint(columns[-1])
+
 def main_employee_detail():
     """Run all functions in program"""
     # Shows welcoming message
@@ -121,15 +131,21 @@ Good bye from Oyistra Staff Storage Data Board!
 See You Later!
             """)
             exitting = True
-        elif menu_options_choice == "1. Enter Employee Details":
-            print(f"""
+        elif menu_options_choice == "2. View Employee Details Entered":
+            print(Fore.YELLOW + "These are the details of Oyistra Staff in the storage board.\n")
+            view_employee_details_entered()
+        else:
+            if menu_options_choice == "1. Enter Employee Details":
+                print(f"""
 {Fore.WHITE}Enter employee details.\n
 {Fore.RED}Details should be 6 value: Emp No, Position, Emp Name, Age, Wages, Contract Hours.\n
 {Fore.WHITE}Emp No must be a whole number not decimal, Position should be the rank of the employee in alphabets, Name should be in alphabets not numbers, Age, Wages and Contract Hours should be whole numbers not decimal and each details should be separated by commas.\n
             """)
-            detail = get_employee_detail()
-            update_employee_data_worksheet(detail)
-        else:
-            menu_option_index = main_menu.show()
+                detail = get_employee_detail()
+                update_employee_data_worksheet(detail)
+            else:
+                menu_option_index = main_menu.show()
 
 main_employee_detail()
+
+
