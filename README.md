@@ -10,6 +10,15 @@
 ![Responsive Mockup](documentation/responsive.png)
 ![oyistra-spreadsheet](documentation/spreadsheet.png)
 
+## How to access the oyistra staff data:
+
+- Enter link [link](https://oyistra-staff-data-3f59f12d77b3.herokuapp.com/) alternatively you can also copy the link: `https://oyistra-staff-data-3f59f12d77b3.herokuapp.com` and paste it in the browser.
+- Once that is achieved the page will be loaded, click on 'RUN PROGRAM'.
+- Enter employee details.
+- View employee details entered.
+- Exit.
+
+
 
 
 
