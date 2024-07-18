@@ -7,6 +7,12 @@
 
   The sites can be accessed through the links [oyistra-heroku](https://oyistra-staff-data-3f59f12d77b3.herokuapp.com/) [oyistra-spreadsheet](https://docs.google.com/spreadsheets/d/1kHBdajrLnGRutdMd_iQ3cj9XT7uqmDMTrZvOMFGT_Bw/edit?gid=0#gid=0)
 
+![Responsive Mockup](documentation/responsive.png)
+![oyistra-spreadsheet](documentation/spreadsheet.png)
+
+
+
+
 
 
 
