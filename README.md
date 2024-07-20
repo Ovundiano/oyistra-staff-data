@@ -98,6 +98,24 @@ The user will see a goodbye message, and the program will be stopped.
 
 ![exit-program](documentation/exit-program.png)
 
+## Technologies Used
 
+### Language:
 
-  
+- [Python 3.8.5](https://www.python.org/downloads/release/python-385/)
+
+### Frameworks/Libraries and Tools:
+#### Python modules/packages:
+
+##### Third-party imports:
+
+- [Simple Terminal Menu](https://pypi.org/project/simple-term-menu/) was used for the implementation of menu.
+- [Colorama](https://pypi.org/project/colorama/) was used to add colors and styles to the project.
+
+#### Other tools:
+
+- [Gitpod](https://gitpod.io/workspaces/) was used as the main tool to write and edit code.
+- [GitHub](https://github.com/) was used to host the code of the website.
+- [heroku.com](https://www.heroku.com/) was used for the deployment of project.
+- [am i responsive](https://ui.dev/amiresponsive) was used to screenshot devices for responsive design for README purpose.
+
