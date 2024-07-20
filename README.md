@@ -107,7 +107,6 @@ The user will see a goodbye message, and the program will be stopped.
 ### Frameworks/Libraries and Tools:
 #### Python modules/packages:
 
-
 ##### Third-party imports:
 
 - [Simple Terminal Menu](https://pypi.org/project/simple-term-menu/) was used for the implementation of menu.
@@ -120,3 +119,39 @@ The user will see a goodbye message, and the program will be stopped.
 - [heroku.com](https://www.heroku.com/) was used for the deployment of project.
 - [am i responsive](https://ui.dev/amiresponsive) was used to screenshot devices for responsive design for README purpose.
 
+## Bugs
+
+### Solved bugs
+1. The function ```view_employee_details_entered``` did not give the correct list of employee detials entered. It was duplicating the list with increase from one to six list of lists.
+
+ - *Solutions:* I added [-1] to the pprint(columns) and it printed the correct output of lists items.
+
+     ```python
+     def view_employee_details_entered():
+    """Collects columns of employee details from data worksheet and returning the datas as a list of lists."""
+    detail_worksheet = SHEET.worksheet("data")
+    columns = []
+    for ind in range(1, 7):
+        column = detail_worksheet.col_values(ind)
+        columns.append(column)
+        pprint(columns[-1])
+    ```
+
+2. The method ```if not details[].isalpha()``` was raising ValueError when alphabets was entered with space.
+
+  - *Solutions:* I added a function ```is_alpha_or_space(string)```. Instead of checking if the string isalpha(), we'll check if our function is_alpha_or_space(), it returns false when we pass the string to it and also updated the use in the function ```validate_data(details)```
+
+  ```python
+  is_alpha_or_space(string):
+    for char in string:
+        if not char.isalpha() or char.isspace():
+            return False
+        return True
+  ```
+  ```python
+  if not is_alpha_or_space(details[])
+  ```
+
+### Unsolved Bugs
+
+  - None.
