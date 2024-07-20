@@ -32,13 +32,13 @@
 - **When the program is loaded**
 
 - The user will be ushered in with a welcoming message.
-- - Shows the terminal menu with three options:
+- Shows the terminal menu with three options:
 
-    1. Enter Employee Details;
+1. Enter Employee Details;
 
-    1. View Employee Details Entered;
+2. View Employee Details Entered;
 
-    1. Exit;
+3. Exit;
 
 ![welcome-message](documentation/welcome-message.png)
 
