@@ -157,3 +157,16 @@ The user will see a goodbye message, and the program will be stopped.
 ### Unsolved Bugs
 
   - None.
+
+## Testing
+
+### Validator
+
+- **run.py**
+ - No errors were found when passed through the official [Pep8 Python Validator](https://pep8ci.herokuapp.com/). This checking was done manually by copying python code and pasting it into the validator.
+
+![Python Validator](documentation/python-validator-1.png)
+
+- Github does not show the last empty line in the file, I added a screenshot of it. The screenshot shows that the code is structured according to PEP8 requirements.
+
+![Python Validator](documentation/python-validator-2.png)
