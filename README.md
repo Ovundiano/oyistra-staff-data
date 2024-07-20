@@ -19,3 +19,9 @@
 - View employee details entered.
 - Exit.
 
+## Users experience
+- As a user what comes to your mind at first is to understand what oyistra staff data entails.
+- How to key in the necessary details required as a user.
+- How to view details entered.
+- How to exit the program once the valid details has been entered.
+
