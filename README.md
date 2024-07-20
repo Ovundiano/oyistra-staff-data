@@ -1,7 +1,7 @@
 # OYISTRA-STAFF-DATA
 
-![Responsive-Mock-heroku](documentation/responsive-heroku-view.png)
-![Responsive-Mock-spreadsheet](documentation/responsive-spreadsheet-view.png)
+![Responsive-Mock-heroku](documentation/responsive-mock-heroku.png)
+![Responsive-Mock-spreadsheet](documentation/responsive-mock-spreadsheet.png)
 
   Oyistra Staff Data is a website designed for the collection of employees details.
 
@@ -14,12 +14,12 @@
 
 ## How to access the oyistra staff data:
 
-- Enter link [link](https://oyistra-staff-data-3f59f12d77b3.herokuapp.com/) alternatively you can also copy the link: `https://oyistra-staff-data-3f59f12d77b3.herokuapp.com` and paste it in the browser.
+- Enter the [link](https://oyistra-staff-data-3f59f12d77b3.herokuapp.com/) alternatively you can also copy the link: `https://oyistra-staff-data-3f59f12d77b3.herokuapp.com` and paste it in the browser.
 - Wait for the page to load and then you click 'RUN PROGRAM'.
 - Choose from the options displayed.
-- Enter employee details.
-- View employee details entered.
-- Exit.
+1.  Enter employee details.
+2.  View employee details entered.
+3.  Exit.
 
 ## Users experience
 - As a user what comes to your mind at first is to understand what oyistra staff data entails.
