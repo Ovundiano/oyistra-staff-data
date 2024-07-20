@@ -1,37 +1,11 @@
 # OYISTRA-STAFF-DATA
 
-  Oyistra Staff Data is a website designed for the collection of employee's details.
+![Responsive-Mock-heroku](documentation/responsive-heroku-view.png)
+![Responsive-Mock-spreadsheet](documentation/spreadsheet.png)
 
-  Ranging from the employee numbers, positions, names, wages, ages and contract hours.
-  And below you will get both links that will lead you to various directions oyistra-heroku,oyistra-spreadsheet.
+  Oyistra Staff Data is a website designed for the collection of employees details.
 
-  The sites can be accessed through the links [oyistra-heroku](https://oyistra-staff-data-3f59f12d77b3.herokuapp.com/) [oyistra-spreadsheet](https://docs.google.com/spreadsheets/d/1kHBdajrLnGRutdMd_iQ3cj9XT7uqmDMTrZvOMFGT_Bw/edit?gid=0#gid=0)
+  Employee details ranges from the employee numbers, positions, names, wages, ages and contract hours.
+  Below are the links to oyistra-heroku where employee details are entered and oyistra-spreadsheet where details are stored.
 
-![Responsive Mockup](documentation/responsive.png)
-![oyistra-spreadsheet](documentation/spreadsheet.png)
-
-## How to access the oyistra staff data:
-
-- Enter link [link](https://oyistra-staff-data-3f59f12d77b3.herokuapp.com/) alternatively you can also copy the link: `https://oyistra-staff-data-3f59f12d77b3.herokuapp.com` and paste it in the browser.
-- Once that is achieved the page will be loaded, click on 'RUN PROGRAM'.
-- Enter employee details.
-- View employee details entered.
-- Exit.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
