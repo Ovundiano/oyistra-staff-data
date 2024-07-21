@@ -195,50 +195,60 @@ The user will see a goodbye message, and the program will be stopped.
 
       - ![Setting Tab](documentation/setting.png)
 
-      
+    - Scroll to Config Var and click Reveal Config Var.
+
+      - ![Config Var](documentation/config-var.png)
+
+    - Type CREDS into the "KEY" area and copy your CREDS file content from your workspace and paste it into the "VALUE" area. Then click "ADD".
+
+       - ![CREDS](documentation/creds.png)
+
+    - Scroll to Buildpacks and click Add buildpacks.
+
+       - ![Buildpacks 1](documentation/buildpacks-1.png)
+
+    - Add heroku and nodejs buildpacks, making sure that python comes first and nodejs underneath.
+
+      - ![Buildpacks 2](documentation/buildpacks-2.png)
 
   2. Go to the Deploy tab:
 
       - ![Deploy Tab](documentation/deploy.png)
 
-      - ![Deployment Method](documentation/deployment/deployment_method.png)
+    - click GitHub and connect to GitHub. Key in your repository name, click search and then connect.
 
-  1. Link your GitHub account and connect the application to the repository you created.
+      - ![Deployment Method](documentation/deployment-method.png)
 
-      - ![Link GitHub account](documentation/deployment/link_to_github.png)
+      - ![Deployed View](documentation/deployed-view.png)
 
-  1. Go to the Settings tab:
+    - Scroll to Manual deploy and click Deploy Branch.
+
+       - ![Deploy branch](documentation/deploy-branch.png)
+
+    - Wait for the completion of the deployment.
+
+       - ![Deploying branch](documentation/deploying-branch.png)
+
+    - Click "View" to launch the application inside a web page.
+
+       - ![View button](documentation/view-button.png)
+
+## Credits
+
+- Color formatting: [Colorama](https://pypi.org/project/colorama/).
+- Terminal menu: [Simple Terminal Menu](https://pypi.org/project/simple-term-menu/).
+- Heroku for hosting the application: [heroku.com](https://www.heroku.com/)
+
+## Acknowledgements
+
+- Divine Mazi, My wife was a great support system towards Me actualizing this project.
+
+  - [Iuliia Konovalova](https://github.com/IuliiaKonovalova) thanks for your support and great guidance.
+
+  - [Code Institute Tutor Support](https://learn.codeinstitute.net/ci_support/diplomainfullstacksoftwarecommoncurriculum/tutor) for their support and help.
+
+  - [Love Sandwiches CI](https://learn.codeinstitute.net/ci_support/diplomainfullstacksoftwarecommoncurriculum/tutor).
+
+
+
   
-      - ![Settings Tab](documentation/deployment/settings_tab.png)
-
-  1. Click "Add buildpack":
-
-      - ![Add Buildpack](documentation/deployment/add_buildpack.png)
-
-  1. Add the Python and Node.js buildpacks in the following order:
-
-      - ![Add Python and Node.js](documentation/deployment/add_python_and_node_js.png)
-
-  1. Click "Reveal Config Vars."
-
-      - ![Reveal Config Vars](documentation/deployment/reveal_config_vars.png)
-
-  1. Add 1 new Config Vars:
-      - Key: PORT Value: 8000
-      - *This Config was provided by [CODE INSTITUTE](https://codeinstitute.net/)*.
-
-  1. Go back to the Deploy tab:
-
-      - ![Deploy Tab](documentation/deployment/deploy_tab.png)
-
-  1. Click "Deploy Branch":
-
-      - ![Deploy Branch](documentation/deployment/deploy_branch.png)
-
-      - Wait for the completion of the deployment.
-
-      - ![Deploying Branch](documentation/deployment/deploying_branch.png)
-
-  1. Click "Open app" to launch the application inside a web page.
-
-      - ![View Button](documentation/deployment/view_app.png)
