@@ -243,11 +243,11 @@ The user will see a goodbye message, and the program will be stopped.
 
 - Divine Mazi, My wife was a great support system towards Me actualizing this project.
 
-  - [Iuliia Konovalova](https://github.com/IuliiaKonovalova) thanks for your support and great guidance.
+- [Iuliia Konovalova](https://github.com/IuliiaKonovalova) thanks for your support and great guidance.
 
-  - [Code Institute Tutor Support](https://learn.codeinstitute.net/ci_support/diplomainfullstacksoftwarecommoncurriculum/tutor) for their support and help.
+- [Code Institute Tutor Support](https://learn.codeinstitute.net/ci_support/diplomainfullstacksoftwarecommoncurriculum/tutor) for their support and help.
 
-  - [Love Sandwiches CI](https://learn.codeinstitute.net/ci_support/diplomainfullstacksoftwarecommoncurriculum/tutor).
+- [Love Sandwiches CI](https://learn.codeinstitute.net/ci_support/diplomainfullstacksoftwarecommoncurriculum/tutor).
 
 
 
