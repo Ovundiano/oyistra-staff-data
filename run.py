@@ -52,19 +52,15 @@ def validate_data(details):
     try:
         if len(details) != 6:
             raise ValueError(f"""
-{Fore.Red}Invalid list of employee details entered, 
-6 details are required and you entered {len(details)} details
-            """)
+{Fore.RED}Invalid list of employee details entered, 6 details are required and you entered {len(details)} details""")
 
         if not details[0].isdigit():
             raise ValueError(f"""
-{Fore.RED}Invalid data type enetered for Employee No, You enetered {details[0]}. Expected Employee No in whole numbers
-            """)
+{Fore.RED}Invalid data type enetered for Employee No, You enetered {details[0]}. Expected Employee No in whole numbers""")
 
         if not is_alpha_or_space(details[1]):
             raise ValueError(f"""
-{Fore.RED}Invalid data type entered for position, You enetered {(details[1])}. Expected employee position in letters
-            """)
+{Fore.RED}Invalid data type entered for position, You enetered {(details[1])}. Expected employee position in letters""")
 
         if not is_alpha_or_space(details[2]):
             raise ValueError(f"""
@@ -73,8 +69,14 @@ def validate_data(details):
 
         if not details[3].isdigit():
             raise ValueError(f"""
-{Fore.RED}Invalid data type enetered for employee age, You enetered {details[3]}. Expected employee age in numbers
-            """)
+{Fore.RED}Invalid data type enetered for employee age, You enetered {details[3]}. Expected employee age in whole numbers""")
+        
+        if int(details[3]) < 18:
+            raise ValueError(f"""{Fore.RED}You enetered {details[3]} as employee age. Employee age entered is below 18!""")
+        elif int(details[3]) > 65:
+            raise ValueError(f"""{Fore.RED}You enetered {details[3]} as employee age. Employee age entered is above 65!""")
+        else:
+            details[3].isdigit()
 
         if not details[4].isdigit():
             raise ValueError(f"""
