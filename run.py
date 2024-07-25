@@ -82,6 +82,13 @@ def validate_data(details):
             raise ValueError(f"""
 {Fore.RED}Invalid data type enetered for wages, You entered {details[4]}. Expected employee wages in numbers""")
 
+        if int(details[4]) < 35000:
+            raise ValueError(f"""{Fore.RED}You enetered {details[4]} as employee wages. Employee wages entered is below 35000!""")
+        elif int(details[4]) > 65000:
+            raise ValueError(f"""{Fore.RED}You enetered {details[4]} as employee wages. Employee wages entered is above 65000!""")
+        else:
+            details[4].isdigit()
+
         if not details[5].isdigit():
             raise ValueError(f"""
 {Fore.RED}Invalid data type entered for contract hours, You enetered {details[5]}. Expected employee contract hours in numbers""")
