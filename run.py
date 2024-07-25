@@ -51,33 +51,40 @@ def validate_data(details):
     """
     try:
         if len(details) != 6:
-            raise ValueError(
-                Fore.RED + f"Invalid list of employee details entered, 6 details are required and you entered {len(details)} details"
-            )
+            raise ValueError(f"""
+{Fore.Red}Invalid list of employee details entered, 
+6 details are required and you entered {len(details)} details
+            """)
 
         if not details[0].isdigit():
-            raise ValueError(
-                Fore.RED + f"Invalid data type for {details[0]}. Expected Emp No in digit")
+            raise ValueError(f"""
+{Fore.RED}Invalid data type enetered for Employee No, You enetered {details[0]}. Expected Employee No in whole numbers
+            """)
 
         if not is_alpha_or_space(details[1]):
-            raise ValueError(
-                Fore.RED + f"Invalid data type for {(details[1])}. Expected employee position in alphabet")
+            raise ValueError(f"""
+{Fore.RED}Invalid data type entered for position, You enetered {(details[1])}. Expected employee position in letters
+            """)
 
         if not is_alpha_or_space(details[2]):
-            raise ValueError(
-                Fore.RED + f"Invalid data type for {(details[2])}. Expected employee name in alphabet")
+            raise ValueError(f"""
+{Fore.RED}Invalid data type enetered for employee name, You enetered {(details[2])}. Expected employee name in letters
+            """)
 
         if not details[3].isdigit():
-            raise ValueError(
-                Fore.RED + f"Invalid data type for {details[3]}. Expected employee age in digit")
+            raise ValueError(f"""
+{Fore.RED}Invalid data type enetered for employee age, You enetered {details[3]}. Expected employee age in numbers
+            """)
 
         if not details[4].isdigit():
-            raise ValueError(
-                Fore.RED + f"Invalid data type for {details[4]}. Expected employee annual wages in digit")
+            raise ValueError(f"""
+{Fore.RED}Invalid data type enetered for wages, You entered {details[4]}. Expected employee wages in numbers
+            """)
 
         if not details[5].isdigit():
-            raise ValueError(
-                Fore.RED + f"Invalid data type for {details[5]}. Expected employee contract hours in digit")
+            raise ValueError(f"""
+{Fore.RED}Invalid data type entered for contract hours, You enetered {details[5]}. Expected employee contract hours in numbers
+            """)
 
     except IndexError:
         raise ValueError("List doesn't have enough items")
@@ -115,7 +122,7 @@ def view_employee_details_entered():
         pprint(columns[-1])
 
 
-def main_employee_detail():
+def main():
     """Run all functions in program"""
     # Shows welcoming message
     print(Fore.WHITE + f"""
@@ -154,5 +161,4 @@ details should be separated by commas.\n
             else:
                 menu_option_index = main_menu.show()
 
-
-main_employee_detail()
+main()
