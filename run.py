@@ -2,7 +2,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 from colorama import Fore
 from simple_term_menu import TerminalMenu
-from pprint import pprint
+from tabulate import tabulate
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -46,8 +46,7 @@ def validate_data(details):
     """
     Inside the details, convert Emp No, Age, Wages and Contract Hours strings
     into integers.
-    Raise ValueError if strings cannot be converted into integers, or if there
-    aren't the same 6 details.
+    Raise ValueError if strings cannot be converted into integers or if the details are not 6 details.
     """
     try:
         if len(details) != 6:
@@ -146,8 +145,7 @@ def view_employee_details_entered():
     for ind in range(1, 7):
         column = detail_worksheet.col_values(ind)
         columns.append(column)
-        pprint(columns[-1])
-
+        print(tabulate(columns[-1]))
 
 def main():
     """Run all functions in program"""
