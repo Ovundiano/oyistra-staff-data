@@ -60,7 +60,7 @@ def validate_data(details):
 
         if not is_alpha_or_space(details[1]):
             raise ValueError(f"""
-{Fore.RED}Invalid data type entered for position, You enetered {(details[1])}. Expected employee position in letters""")
+{Fore.RED}Invalid data type entered for employee position, You enetered {(details[1])}. Expected employee position in letters""")
 
         if not is_alpha_or_space(details[2]):
             raise ValueError(f"""
@@ -80,13 +80,18 @@ def validate_data(details):
 
         if not details[4].isdigit():
             raise ValueError(f"""
-{Fore.RED}Invalid data type enetered for wages, You entered {details[4]}. Expected employee wages in numbers
-            """)
+{Fore.RED}Invalid data type enetered for wages, You entered {details[4]}. Expected employee wages in numbers""")
 
         if not details[5].isdigit():
             raise ValueError(f"""
-{Fore.RED}Invalid data type entered for contract hours, You enetered {details[5]}. Expected employee contract hours in numbers
-            """)
+{Fore.RED}Invalid data type entered for contract hours, You enetered {details[5]}. Expected employee contract hours in numbers""")
+
+        if int(details[5]) < 16:
+            raise ValueError(f"""{Fore.RED}You enetered {details[5]} as contract hours. Contract hours entered is less than 16hours!""")
+        elif int(details[5]) > 42:
+            raise ValueError(f"""{Fore.RED}You enetered {details[5]} as contract hours. Contract hours entered is more than 42hours!""")
+        else:
+            details[5].isdigit()
 
     except IndexError:
         raise ValueError("List doesn't have enough items")
