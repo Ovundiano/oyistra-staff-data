@@ -62,6 +62,19 @@ def validate_data(details):
             raise ValueError(f"""
 {Fore.RED}Invalid data type entered for employee position, You enetered {(details[1])}. Expected employee position in letters""")
 
+        if is_alpha_or_space(details[1]) != "Sales Manager":
+            raise ValueError(f"""{Fore.RED}You enetered {(details[1])} as employee position. Employee position should either be chief executive office, human resources officer, sales manager, financial officer, sales representative""")
+        elif is_alpha_or_space(details[1]) != "Chief Executive Officer":
+            raise ValueError(f"""{Fore.RED}You enetered {(details[1])} as employee position. Employee position should either be chief executive office, human resources officer, sales manager, financial officer, sales representative""")
+        elif is_alpha_or_space(details[1]) != "Human Resources Officer":
+            raise ValueError(f"""{Fore.RED}You enetered {(details[1])} as employee position. Employee position should either be chief executive office, human resources officer, sales manager, financial officer, sales representative""")
+        elif is_alpha_or_space(details[1]) != "Financial Officer":
+            raise ValueError(f"""{Fore.RED}You enetered {(details[1])} as employee position. Employee position should either be chief executive office, human resources officer, sales manager, financial officer, sales representative""")
+        elif is_alpha_or_space(details[1]) != "Sales Representative":
+            raise ValueError(f"""{Fore.RED}You enetered {(details[1])} as employee position. Employee position should either be chief executive office, human resources officer, sales manager, financial officer, sales representative""")
+        else:
+            is_alpha_or_space(details[1])
+
         if not is_alpha_or_space(details[2]):
             raise ValueError(f"""
 {Fore.RED}Invalid data type enetered for employee name, You enetered {(details[2])}. Expected employee name in letters
