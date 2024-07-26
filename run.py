@@ -46,69 +46,103 @@ def validate_data(details):
     """
     Inside the details, convert Emp No, Age, Wages and Contract Hours strings
     into integers.
-    Raise ValueError if strings cannot be converted into integers or if the details are not 6 details.
+    Raise ValueError if strings cannot be converted into integers
+    or if the details are not 6 details.
     """
     try:
         if len(details) != 6:
             raise ValueError(f"""
-{Fore.RED}Invalid list of employee details entered, 6 details are required and you entered {len(details)} details""")
+{Fore.RED}Invalid list of employee details entered, 6 details are required and
+you entered {len(details)} details""")
 
         if not details[0].isdigit():
             raise ValueError(f"""
-{Fore.RED}Invalid data type enetered for Employee No, You enetered {details[0]}. Expected Employee No in whole numbers""")
+{Fore.RED}Invalid data type enetered for Employee No. You enetered {details[0]}
+expected Employee No in whole number""")
 
         if not is_alpha_or_space(details[1]):
             raise ValueError(f"""
-{Fore.RED}Invalid data type entered for employee position, You enetered {(details[1])}. Expected employee position in letters""")
+{Fore.RED}Invalid data type entered for employee position, You enetered
+{(details[1])}. Expected employee position in letters""")
 
         if is_alpha_or_space(details[1]) != "Sales Manager":
-            raise ValueError(f"""{Fore.RED}You enetered {(details[1])} as employee position. Employee position should either be chief executive office, human resources officer, sales manager, financial officer, sales representative""")
+            raise ValueError(f"""
+{Fore.RED}You enetered {(details[1])} as employee position. Employee position
+should either be chief executive office, human resources officer,
+sales manager, financial officer or sales representative""")
         elif is_alpha_or_space(details[1]) != "Chief Executive Officer":
-            raise ValueError(f"""{Fore.RED}You enetered {(details[1])} as employee position. Employee position should either be chief executive office, human resources officer, sales manager, financial officer, sales representative""")
+            raise ValueError(f"""
+{Fore.RED}You enetered {(details[1])} as employee position. Employee
+position should either be chief executive office, human resources officer,
+sales manager, financial officer or sales representative""")
         elif is_alpha_or_space(details[1]) != "Human Resources Officer":
-            raise ValueError(f"""{Fore.RED}You enetered {(details[1])} as employee position. Employee position should either be chief executive office, human resources officer, sales manager, financial officer, sales representative""")
+            raise ValueError(f"""
+{Fore.RED}You enetered {(details[1])} as employee position. Employee position
+should either be chief executive office, human resources officer,
+sales manager, financial officer or sales representative""")
         elif is_alpha_or_space(details[1]) != "Financial Officer":
-            raise ValueError(f"""{Fore.RED}You enetered {(details[1])} as employee position. Employee position should either be chief executive office, human resources officer, sales manager, financial officer, sales representative""")
+            raise ValueError(f"""
+{Fore.RED}You enetered {(details[1])} as employee position. Employee position
+should either be chief executive office, human resources officer,
+sales manager, financial officer or sales representative""")
         elif is_alpha_or_space(details[1]) != "Sales Representative":
-            raise ValueError(f"""{Fore.RED}You enetered {(details[1])} as employee position. Employee position should either be chief executive office, human resources officer, sales manager, financial officer, sales representative""")
+            raise ValueError(f"""
+{Fore.RED}You enetered {(details[1])} as employee position. Employee position
+should either be chief executive office, human resources officer,
+sales manager, financial officer or sales representative""")
         else:
             is_alpha_or_space(details[1])
 
         if not is_alpha_or_space(details[2]):
             raise ValueError(f"""
-{Fore.RED}Invalid data type enetered for employee name, You enetered {(details[2])}. Expected employee name in letters
-            """)
+{Fore.RED}Invalid data type enetered for employee name, You enetered
+{(details[2])}. Expected employee name in letters""")
 
         if not details[3].isdigit():
             raise ValueError(f"""
-{Fore.RED}Invalid data type enetered for employee age, You enetered {details[3]}. Expected employee age in whole numbers""")
-        
+{Fore.RED}Invalid data type enetered for employee age, You enetered
+{details[3]}. Expected employee age in whole numbers""")
+
         if int(details[3]) < 18:
-            raise ValueError(f"""{Fore.RED}You enetered {details[3]} as employee age. Employee age entered is below 18!""")
+            raise ValueError(f"""
+{Fore.RED}You enetered {details[3]} as employee age. Employee age entered
+is below 18!""")
         elif int(details[3]) > 65:
-            raise ValueError(f"""{Fore.RED}You enetered {details[3]} as employee age. Employee age entered is above 65!""")
+            raise ValueError(f"""
+{Fore.RED}You enetered {details[3]} as employee age. Employee age entered is
+above 65!""")
         else:
             details[3].isdigit()
 
         if not details[4].isdigit():
             raise ValueError(f"""
-{Fore.RED}Invalid data type enetered for wages, You entered {details[4]}. Expected employee wages in numbers""")
+{Fore.RED}Invalid data type enetered for wages, You entered {details[4]}.
+Expected employee wages in numbers""")
 
         if int(details[4]) < 35000:
-            raise ValueError(f"""{Fore.RED}You enetered {details[4]} as employee wages. Employee wages entered is below 35000!""")
+            raise ValueError(f"""
+{Fore.RED}You enetered {details[4]} as employee wages. Employee wages entered
+is below 35000!""")
         elif int(details[4]) > 65000:
-            raise ValueError(f"""{Fore.RED}You enetered {details[4]} as employee wages. Employee wages entered is above 65000!""")
+            raise ValueError(f"""
+{Fore.RED}You enetered {details[4]} as employee wages. Employee wages entered
+is above 65000!""")
         else:
             details[4].isdigit()
 
         if not details[5].isdigit():
             raise ValueError(f"""
-{Fore.RED}Invalid data type entered for contract hours, You enetered {details[5]}. Expected employee contract hours in numbers""")
+{Fore.RED}Invalid data type entered for contract hours, You enetered
+{details[5]}. Expected employee contract hours in numbers""")
 
         if int(details[5]) < 16:
-            raise ValueError(f"""{Fore.RED}You enetered {details[5]} as contract hours. Contract hours entered is less than 16hours!""")
+            raise ValueError(f"""
+{Fore.RED}You enetered {details[5]} as contract hours. Contract hours entered
+is less than 16hours!""")
         elif int(details[5]) > 42:
-            raise ValueError(f"""{Fore.RED}You enetered {details[5]} as contract hours. Contract hours entered is more than 42hours!""")
+            raise ValueError(f"""
+{Fore.RED}You enetered {details[5]} as contract hours. Contract hours entered
+is more than 42hours!""")
         else:
             details[5].isdigit()
 
@@ -134,7 +168,8 @@ def update_employee_data_worksheet(detail):
     print("Updating worksheet with employee details entered...\n")
     detail_worksheet = SHEET.worksheet("data")
     detail_worksheet.append_row(detail)
-    print(Fore.YELLOW + "You have successfully updated employee data in worksheet.\n")
+    print(f"""{Fore.YELLOW}You have successfully updated employee data in
+        worksheet.\n""")
 
 
 def view_employee_details_entered():
@@ -146,6 +181,7 @@ def view_employee_details_entered():
         column = detail_worksheet.col_values(ind)
         columns.append(column)
         print(tabulate(columns[-1]))
+
 
 def main():
     """Run all functions in program"""
@@ -168,16 +204,17 @@ See You Later!
             """)
             exitting = True
         elif menu_options_choice == "2. View Employee Details Entered":
-            print(Fore.YELLOW + "These are the details of Oyistra Staff in the storage board.\n")
+            print(f"""{Fore.YELLOW}These are the details of Oyistra Staff
+            in the storage board.\n""")
             view_employee_details_entered()
         else:
             if menu_options_choice == "1. Enter Employee Details":
                 print(f"""
 {Fore.WHITE}Enter employee details.\n
-{Fore.RED}Details should be 6 value: Emp No, Position, Emp Name, Age, Wages,
+{Fore.RED}Details should be 6 values: Emp No, Position, Emp Name, Age, Wages,
 Contract Hours.\n
 {Fore.WHITE}Emp No must be a whole number not decimal, Position should be the
-rank of the employee in alphabets, Name should be in alphabets not numbers,
+department of the employee in letters, Name should be in letters not numbers,
 Age,Wages and Contract Hours should be whole numbers not decimal and each
 details should be separated by commas.\n
             """)
@@ -185,5 +222,6 @@ details should be separated by commas.\n
                 update_employee_data_worksheet(detail)
             else:
                 menu_option_index = main_menu.show()
+
 
 main()
