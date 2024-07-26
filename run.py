@@ -65,31 +65,31 @@ expected Employee No in whole number""")
 {Fore.RED}Invalid data type entered for employee position, You enetered
 {(details[1])}. Expected employee position in letters""")
 
-        if details[1] != "Sales Manager":
+        if details[1] is not "Sales Manager":
             raise ValueError(f"""
 {Fore.RED}You enetered {(details[1])} as employee position. Employee position
-should either be chief executive office, human resources officer,
-sales manager, financial officer or sales representative""")
-        elif details[1] != "Chief Executive Officer":
+should either be sales consultant, manager, sales manager, financial officer
+ or sales representative""")
+        elif details[1] != "Chief Consultant":
             raise ValueError(f"""
 {Fore.RED}You enetered {(details[1])} as employee position. Employee
-position should either be chief executive office, human resources officer,
-sales manager, financial officer or sales representative""")
+position should either be sales consultant, manager, sales manager, financial
+ officer or sales representative""")
         elif details[1] != "Human Resources Officer":
             raise ValueError(f"""
 {Fore.RED}You enetered {(details[1])} as employee position. Employee position
-should either be chief executive office, human resources officer,
-sales manager, financial officer or sales representative""")
+should either be sales consultant, manager, sales manager, financial officer
+ or sales representative""")
         elif details[1] != "Financial Officer":
             raise ValueError(f"""
 {Fore.RED}You enetered {(details[1])} as employee position. Employee position
-should either be chief executive office, human resources officer,
-sales manager, financial officer or sales representative""")
+should either be sales consultant, manager, sales manager, financial officer
+ or sales representative""")
         elif details[1] != "Sales Representative":
             raise ValueError(f"""
 {Fore.RED}You enetered {(details[1])} as employee position. Employee position
-should either be chief executive office, human resources officer,
-sales manager, financial officer or sales representative""")
+should either be sales consultant, manager, sales manager, financial officer
+ or sales representative""")
         else:
             is_alpha_or_space(details[1])
 
