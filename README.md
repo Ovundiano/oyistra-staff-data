@@ -52,29 +52,34 @@ When the user enters details that is not equal to six, the user will see an erro
 
 ![error-message](documentation/error-message-1.png)
 
-When the user enter words in place of numbers for Emp No, the user will see an error message and a provision to re-enter employee details.
+When the user enter letters in place of whole numbers for Employee No, the user will see an error message and a provision to re-enter employee details.
 
 ![error-message](documentation/error-message-2.png)
 
-When a user enters numbers in place of words for Position, the user will see an error message and a provision to re-enter employee details.
+When a user enters numbers in place of letters for Position, the user will see an error message and a provision to re-enter employee details.
 
 ![error-message](documentation/error-message-3.png)
 
-When a user enters numbers in place of words for Name, the user will see an error message and a provision to re-enter employee details.
+When a user enters a position not included in the company's positions, the user will see an error message and a provision to re-enter employee details.
 
 ![error-message](documentation/error-message-4.png)
 
+
+When a user enters numbers in place of words for Name, the user will see an error message and a provision to re-enter employee details.
+
+![error-message]()
+
 When the user enter words in place of numbers for Age, the user will see an error message and a provision to re-enter employee details.
 
-![error-message](documentation/error-message-5.png)
+![error-message]()
 
 When the user enter words in place of numbers for Wages, the user will see an error message and a provision to re-enter employee details.
 
-![error-message](documentation/error-message-6.png)
+![error-message]()
 
 When the user enter words in place of numbers for Contract Hours, the user will see an error message and a provision to re-enter employee details.
 
-![error-message](documentation/error-message-7.png)
+![error-message]()
 
 - **When the user enters valid details**
 
