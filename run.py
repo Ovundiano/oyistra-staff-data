@@ -30,7 +30,7 @@ def get_employee_detail():
     are valid.
     """
     while True:
-        print(Fore.RED + "Example: 001,Sales Rep,Ovunda Eche,20,30000,42\n")
+        print(Fore.RED + "Example: 001,Sales Manager,Ovunda Eche,20,30000,42\n")
 
         detail_str = input(Fore.WHITE + "Enter employee details:\n")
 
@@ -65,31 +65,11 @@ expected Employee No in whole number""")
 {Fore.RED}Invalid data type entered for employee position, You enetered
 {(details[1])}. Expected employee position in letters""")
 
-        if details[1] is not "Sales Manager":
+        if details[1] not in ["sales manager", "sales consultant", "sales representative", "finance officer", "human resources"]:
             raise ValueError(f"""
 {Fore.RED}You enetered {(details[1])} as employee position. Employee position
-should either be sales consultant, manager, sales manager, financial officer
- or sales representative""")
-        elif details[1] != "Chief Consultant":
-            raise ValueError(f"""
-{Fore.RED}You enetered {(details[1])} as employee position. Employee
-position should either be sales consultant, manager, sales manager, financial
- officer or sales representative""")
-        elif details[1] != "Human Resources Officer":
-            raise ValueError(f"""
-{Fore.RED}You enetered {(details[1])} as employee position. Employee position
-should either be sales consultant, manager, sales manager, financial officer
- or sales representative""")
-        elif details[1] != "Financial Officer":
-            raise ValueError(f"""
-{Fore.RED}You enetered {(details[1])} as employee position. Employee position
-should either be sales consultant, manager, sales manager, financial officer
- or sales representative""")
-        elif details[1] != "Sales Representative":
-            raise ValueError(f"""
-{Fore.RED}You enetered {(details[1])} as employee position. Employee position
-should either be sales consultant, manager, sales manager, financial officer
- or sales representative""")
+should either be sales consultant, sales manager, human resources, 
+finance officer or sales representative""")
         else:
             is_alpha_or_space(details[1])
 
