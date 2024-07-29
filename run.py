@@ -65,7 +65,7 @@ expected Employee No in whole number""")
 {Fore.RED}Invalid data type entered for employee position, You enetered
 {(details[1])}. Expected employee position in letters""")
 
-        if details[1] not in ["sales manager", "sales consultant", "sales representative", "finance officer", "human resources"]:
+        if details[1] not in ["Sales Manager", "Sales Consultant", "Sales Representative", "Finance Officer", "Human Resources"]:
             raise ValueError(f"""
 {Fore.RED}You enetered {(details[1])} as employee position. Employee position
 should either be sales consultant, sales manager, human resources, 
@@ -147,6 +147,7 @@ def update_employee_data_worksheet(detail):
     """Update data worksheet with list of new employee details provided."""
     print("Updating worksheet with employee details entered...\n")
     detail_worksheet = SHEET.worksheet("data")
+    print("detail")
     detail_worksheet.append_row(detail)
     print(f"""{Fore.YELLOW}You have successfully updated employee data in
         worksheet.\n""")

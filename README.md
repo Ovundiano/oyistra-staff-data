@@ -64,8 +64,7 @@ When a user enters a position not included in the company's positions, the user 
 
 ![error-message](documentation/error-message-4.png)
 
-
-When a user enters numbers in place of words for Name, the user will see an error message and a provision to re-enter employee details.
+When a user enters numbers in place of letters for Name, the user will see an error message and a provision to re-enter employee details.
 
 ![error-message]()
 
