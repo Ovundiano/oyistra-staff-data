@@ -66,19 +66,25 @@ When a user enters a position not included in the company's positions, the user 
 
 When a user enters numbers in place of letters for Name, the user will see an error message and a provision to re-enter employee details.
 
-![error-message]()
+![error-message](documentation/error-message-5.png)
 
-When the user enter words in place of numbers for Age, the user will see an error message and a provision to re-enter employee details.
+When a user enter letters in place of numbers for Age, the user will see an error message and a provision to re-enter employee details.
 
-![error-message]()
+![error-message](documentation/error-message-6.png)
 
-When the user enter words in place of numbers for Wages, the user will see an error message and a provision to re-enter employee details.
+When the user enter letters in place of whole numbers for Wages, the user will see an error message and a provision to re-enter employee details.
 
-![error-message]()
+![error-message](documentation/error-messge-7.png)
 
-When the user enter words in place of numbers for Contract Hours, the user will see an error message and a provision to re-enter employee details.
+When the user enter letters in place of numbers for Contract Hours, the user will see an error message and a provision to re-enter employee details.
 
-![error-message]()
+![error-message](documentation/error-message-8.png)
+
+When a user enters whole number less than 16 and above 42hours, the user will see an error message and a provision to re-enter employee details.
+
+![error-message](documentation/error-message-9.png)
+
+![error-message](documentation/error-message-10.png)
 
 - **When the user enters valid details**
 
@@ -92,7 +98,9 @@ Below the validatory message, the user can find the terminal menu with the optio
 The user sees the details of all employees data that has been entered in the spreadsheet.
 Below the etails of all employees data that has been entered, the user can find the terminal menu with the options to enter employee details, view employee details or exit.
 
-![view-details](documentation/view-employee-details-.png)
+![view-details](documentation/view-detail-1.png)
+
+![view-details](documentation/view-detail-2.png)
 
 - **When the user chooses "Exit"**
 
@@ -109,9 +117,12 @@ The user will see a goodbye message, and the program will be stopped.
 ### Frameworks/Libraries and Tools:
 #### Python modules/packages:
 
-##### Third-party imports:
+##### Third-party packages:
 
 - [Simple Terminal Menu](https://pypi.org/project/simple-term-menu/) was used for the implementation of menu.
+- [Google Spreadsheet](https://workspace.google.com/intl/en_ie/products/sheets/) for receiving data.
+- [Google API](https://console.cloud.google.com/projectcreate?previousPage=%2Fhome%2Fdashboard%3Fproject%3Doyistra-staff-data&organizationId=0) for creating Credentials.
+- [Tabulate](https://pypi.org/project/tabulate/) was used for the table to view entered details..
 - [Colorama](https://pypi.org/project/colorama/) was used to add colors and styles to the project.
 
 #### Other tools:
@@ -238,6 +249,7 @@ The user will see a goodbye message, and the program will be stopped.
 - Color formatting: [Colorama](https://pypi.org/project/colorama/).
 - Terminal menu: [Simple Terminal Menu](https://pypi.org/project/simple-term-menu/).
 - Heroku for hosting the application: [heroku.com](https://www.heroku.com/)
+- GitHub for hosting the code of the website [GitHub](https://github.com/).
 
 ## Acknowledgements
 
