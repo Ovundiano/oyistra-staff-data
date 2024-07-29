@@ -30,7 +30,8 @@ def get_employee_detail():
     are valid.
     """
     while True:
-        print(Fore.RED + "Example: 001,Sales Manager,Ovunda Eche,20,30000,42\n")
+        print(f"""
+{Fore.RED}Example: 001,Sales Manager,Ovunda Eche,20,30000,42\n""")
 
         detail_str = input(Fore.WHITE + "Enter employee details:\n")
 
@@ -65,10 +66,11 @@ expected Employee No in whole number""")
 {Fore.RED}Invalid data type entered for employee position, You enetered
 {(details[1])}. Expected employee position in letters""")
 
-        if details[1] not in ["Sales Manager", "Sales Consultant", "Sales Representative", "Finance Officer", "Human Resources"]:
+        if details[1] not in ["Sales Manager", "Sales Consultant",
+           "Sales Representative", "Finance Officer", "Human Resources"]:
             raise ValueError(f"""
 {Fore.RED}You enetered {(details[1])} as employee position. Employee position
-should either be sales consultant, sales manager, human resources, 
+should either be sales consultant, sales manager, human resources,
 finance officer or sales representative""")
         else:
             is_alpha_or_space(details[1])
